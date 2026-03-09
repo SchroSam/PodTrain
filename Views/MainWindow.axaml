@@ -9,12 +9,158 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="PodTrain">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+ <Grid RowDefinitions="Auto,*">
+
+        <!-- Search Bar -->
+        <Border Background="#2A2A2A" Padding="12">
+            <StackPanel Orientation="Horizontal">
+
+                <TextBox Width="450"
+                         Height="36"
+                         Watermark="Search podcast transcripts..."
+                         Background="#333"
+                         Foreground="White"
+                         BorderBrush="#555"
+                         CornerRadius="6"
+                         Margin="0,0,10,0"/>
+
+                <Button Content="Search"
+                        Width="110"
+                        Height="36"
+                        Background="#4CAF50"
+                        Foreground="White"
+                        CornerRadius="6"/>
+
+            </StackPanel>
+        </Border>
+
+
+        <!-- Results -->
+        <ScrollViewer Grid.Row="1" Margin="12">
+
+            <StackPanel Spacing="25">
+
+                <!-- Podcast Group -->
+                <StackPanel>
+                    <TextBlock Text="Tech Talk Podcast"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="White"
+                               Margin="0,0,0,10"/>
+
+                    <WrapPanel>
+
+                        <Border Width="260"
+                                Height="120"
+                                Background="#2A2A2A"
+                                CornerRadius="8"
+                                Margin="0,0,12,12">
+
+                            <StackPanel Margin="10">
+                                <TextBlock Text="Episode 42"
+                                           FontWeight="Bold"
+                                           Foreground="White"/>
+
+                                <TextBlock Text="Transcript match found"
+                                           Foreground="#BBBBBB"
+                                           Margin="0,5,0,0"/>
+
+                                <TextBlock Text="Keywords: AI, Future"
+                                           FontSize="12"
+                                           Foreground="#888"/>
+                            </StackPanel>
+
+                        </Border>
+
+                        <Border Width="260"
+                                Height="120"
+                                Background="#2A2A2A"
+                                CornerRadius="8"
+                                Margin="0,0,12,12">
+
+                            <StackPanel Margin="10">
+                                <TextBlock Text="Episode 37"
+                                           FontWeight="Bold"
+                                           Foreground="White"/>
+
+                                <TextBlock Text="Transcript match found"
+                                           Foreground="#BBBBBB"
+                                           Margin="0,5,0,0"/>
+
+                                <TextBlock Text="Keywords: Cloud, Servers"
+                                           FontSize="12"
+                                           Foreground="#888"/>
+                            </StackPanel>
+
+                        </Border>
+
+                    </WrapPanel>
+                </StackPanel>
+
+
+                <!-- Second Podcast Group -->
+                <StackPanel>
+                    <TextBlock Text="Gaming Weekly"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="White"
+                               Margin="0,0,0,10"/>
+
+                    <WrapPanel>
+
+                        <Border Width="260"
+                                Height="120"
+                                Background="#2A2A2A"
+                                CornerRadius="8"
+                                Margin="0,0,12,12">
+
+                            <StackPanel Margin="10">
+                                <TextBlock Text="Episode 18"
+                                           FontWeight="Bold"
+                                           Foreground="White"/>
+
+                                <TextBlock Text="Transcript match found"
+                                           Foreground="#BBBBBB"
+                                           Margin="0,5,0,0"/>
+
+                                <TextBlock Text="Keywords: speedrun"
+                                           FontSize="12"
+                                           Foreground="#888"/>
+                            </StackPanel>
+
+                        </Border>
+
+                        <Border Width="260"
+                                Height="120"
+                                Background="#2A2A2A"
+                                CornerRadius="8"
+                                Margin="0,0,12,12">
+
+                            <StackPanel Margin="10">
+                                <TextBlock Text="Episode 12"
+                                           FontWeight="Bold"
+                                           Foreground="White"/>
+
+                                <TextBlock Text="Transcript match found"
+                                           Foreground="#BBBBBB"
+                                           Margin="0,5,0,0"/>
+
+                                <TextBlock Text="Keywords: indie games"
+                                           FontSize="12"
+                                           Foreground="#888"/>
+                            </StackPanel>
+
+                        </Border>
+
+                    </WrapPanel>
+                </StackPanel>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
 
 </Window>
